@@ -1,20 +1,23 @@
 /* ********* */
 /* @HOME */
 /* ********* */
-
-// Multiples backgrounds
-.contenedor{
-    background: url(../assets/img/desktop/chica_guitarra.jpg) right top no-repeat,
-                url(../assets/img/desktop/hojas.jpg) left bottom no-repeat,
-                url(../assets/img/desktop/lineas.jpg) left top no-repeat;
+body{
+    background-color: lighten(map-get(map-get($colores, fondo), base), 25%);
 }
+
 
 .contenedor{
     // Tamaño de la caja
     height: 100vh;
+    max-height: 800px;
     max-width: $desktop;
     margin: 0 auto;
 
-    // Fondo: color y tres imágenes
-    background-color: map-get(map-get($colores, fondo), base);
+    // Multiples backgrounds
+    background: url(../assets/img/desktop/chica_guitarra.jpg) right top no-repeat,
+                url(../assets/img/desktop/hojas.jpg) left 80% no-repeat,
+                url(../assets/img/desktop/lineas.jpg) left top no-repeat,
+                linear-gradient(to left,map-get(map-get($colores, fondo), base) 0%, #573E75 100%);
+    
+    background-size: contain, 12%, 10%;            
 }
